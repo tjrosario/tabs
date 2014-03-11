@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="tabs.css" />
+	</head>
+	<body>
+		
+		<section id="tabs">
+			<nav>
+				<ul>
+					<li>Tab 1</li>
+					<li>Tab 2</li>
+					<li>Tab 3</li>
+				</ul>
+			</nav>
+			
+			<div class="tab">
+				<h1>Tab 1</h1>
+				<p>Bacon ipsum dolor sit amet venison swine kevin, beef ribs tongue bacon shankle fatback kielbasa sausage ground round ball tip short loin strip steak. Corned beef bacon boudin, biltong chicken tail prosciutto pig porchetta doner andouille kielbasa frankfurter short loin chuck. Ham hock meatloaf fatback chicken, jowl shankle pastrami pork loin porchetta kielbasa hamburger pancetta strip steak chuck. Turkey bacon meatball pastrami, sirloin beef ribs doner porchetta tenderloin beef. Prosciutto sirloin frankfurter, rump leberkas beef corned beef turducken bresaola brisket tail jerky beef ribs. Ribeye salami strip steak fatback, doner pork loin meatball bresaola kevin. Pastrami strip steak doner t-bone meatball.</p>
+			</div>
+			
+			<div class="tab">
+				<h1>Tab 2</h1>
+				<p>Brisket ham hock fatback tail prosciutto. Tenderloin sausage cow drumstick kielbasa. Strip steak ribeye porchetta pastrami filet mignon. Bresaola tenderloin hamburger, landjaeger capicola beef ribs pork loin drumstick meatloaf. Rump venison andouille tri-tip pancetta landjaeger, jowl brisket capicola tongue ball tip. Ball tip turducken meatball shank bresaola short ribs pork belly meatloaf.</p>
+			</div>
+			
+			<div class="tab">
+				<h1>Tab 3</h1>
+				<p>Beef ribs filet mignon meatloaf strip steak. Doner porchetta short loin, salami tail sirloin turkey drumstick turducken bresaola chicken. Pastrami ham hock turducken leberkas meatloaf andouille. Pastrami short ribs ground round andouille, spare ribs corned beef salami tail. Shank flank sausage leberkas jerky short loin chuck shoulder boudin. Kielbasa shankle tail shank kevin andouille beef ribs sausage t-bone short loin doner.</p>
+			</div>
+		</section>
+		
+		<div id="debug">
+			<div id="onClose"></div>
+			<div id="onOpen"></div>
+			
+		</div>
+	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="tabs.js"></script>
+		<script>
+			jQuery(document).ready(function (event) {
+				var tabs = new Tabs($('#tabs nav li'), $('#tabs .tab'), {
+					onOpen: function ($tab) {
+						$('#onOpen').html('Tab ' + $tab.index() + ' opened');
+					},
+					onClose: function ($tab) {
+						$('#onClose').html('Tab ' + $tab.index() + ' closed');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

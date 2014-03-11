@@ -1,0 +1,50 @@
+body { 
+	font-family: helvetica, arial, sans-serif; 
+}
+
+#tabs nav ul {
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#tabs nav li {
+	float: left;
+	cursor: pointer;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	background: #ededed;
+	font-size: 14px;
+	padding: 5px 10px;
+	margin: 0 10px 0 0;
+	position: relative;
+}
+#tabs nav li.active {
+	background: #ddd;
+}
+
+#tabs .tab {
+	background: #ededed;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: none;
+}
+
+#tabs .tab h1 {
+	font-size: 18px;
+	margin: 0 0 5px;
+}
+#tabs .tab p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+#debug {
+	margin: 20px 0;
+	font-size: 14px;
+}
